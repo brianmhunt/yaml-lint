@@ -11,7 +11,7 @@ function lint(content, opts) {
 
   return new Promise(function (resolve, reject) {
     try {
-      var doc = yaml.safeLoadAll(content, [], {
+      var doc = yaml.safeLoadAll(content, function(){}, {
         schema: yaml[options.schema]
       });
       resolve();
